@@ -1,5 +1,6 @@
 package net.coolkidsforsale.tutorialmod;
 
+import net.coolkidsforsale.tutorialmod.block.ModBlocks;
 import net.coolkidsforsale.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -14,6 +15,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 	}
 }
