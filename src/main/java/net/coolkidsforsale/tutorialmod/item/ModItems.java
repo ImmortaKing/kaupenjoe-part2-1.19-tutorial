@@ -1,6 +1,7 @@
 package net.coolkidsforsale.tutorialmod.item;
 
 import net.coolkidsforsale.tutorialmod.TutorialMod;
+import net.coolkidsforsale.tutorialmod.item.custom.EightBallItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -11,6 +12,9 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
     public static final Item TANZANITE = registerItem("tanzanite",
             new Item(new FabricItemSettings().group(ModItemGroup.TANZANITE)));
+
+    public static final Item EIGHT_BALL = registerItem("eight_ball",
+            new EightBallItem(new FabricItemSettings().group(ModItemGroup.TANZANITE).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
