@@ -2,6 +2,7 @@ package net.coolkidsforsale.tutorialmod;
 
 import net.coolkidsforsale.tutorialmod.block.ModBlocks;
 import net.coolkidsforsale.tutorialmod.item.ModItems;
+import net.coolkidsforsale.tutorialmod.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,5 +18,7 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+        ModVillagers.registerVillagers();
+		ModVillagers.registerTrades();
 	}
 }
