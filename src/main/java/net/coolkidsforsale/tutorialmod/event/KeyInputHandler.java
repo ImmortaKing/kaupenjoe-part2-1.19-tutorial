@@ -1,7 +1,10 @@
 package net.coolkidsforsale.tutorialmod.event;
 
+import net.coolkidsforsale.tutorialmod.networking.ModMessages;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
@@ -15,8 +18,8 @@ public class KeyInputHandler {
     public static void registerKeyInputs() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(drinkingKey.wasPressed()) {
-                // This happens when our custom key is pressed
-                client.player.sendChatMessage("Hello I pressed a Key");
+               // ClientPlayNetworking.send(ModMessages.EXAMPLE_ID, PacketByteBufs.create());
+                ClientPlayNetworking.send(ModMessages.DRINKING_ID, PacketByteBufs.create());
             }
         });
     }

@@ -2,6 +2,7 @@ package net.coolkidsforsale.tutorialmod;
 
 import net.coolkidsforsale.tutorialmod.block.ModBlocks;
 import net.coolkidsforsale.tutorialmod.item.ModItems;
+import net.coolkidsforsale.tutorialmod.networking.ModMessages;
 import net.coolkidsforsale.tutorialmod.painting.ModPaintings;
 import net.coolkidsforsale.tutorialmod.util.ModLootTableModifiers;
 import net.coolkidsforsale.tutorialmod.villager.ModVillagers;
@@ -30,5 +31,6 @@ public class TutorialMod implements ModInitializer {
 		ModOreGeneration.generateOres();
 
         ModLootTableModifiers.modifyLootTables();
+        ModMessages.registerC2SPackets();
 	}
 }
